@@ -12,12 +12,13 @@ import qs.modules.areapicker
 import qs.modules.background
 import qs.modules.drawers
 import qs.modules.lock
+import qs.modules.topclock
 import qs.daemons
 
 ShellRoot {
     id: root
 
-    settings.watchFiles: true
+    settings.watchFiles: false
 
     Component.onCompleted: {
         // Force certain singletons to load on shell init instead of lazily
@@ -44,6 +45,7 @@ ShellRoot {
     Background {}
     Drawers {}
     AreaPicker {}
+    TopClock {}
     Lock {
         id: lock
     }
